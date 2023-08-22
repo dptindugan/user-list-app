@@ -1,0 +1,47 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input-wrapper {
+  position: relative;
+  padding: 8px;
+  font-size: 18px;
+  background-color: white;
+  width: fit-content;
+  cursor: text;
+  border-radius: 5px;
+  padding-top: 1rem;
+  display: inline-flex;
+}
+
+.input-wrapper:has(input:focus-visible) {
+  outline: 1px solid gray;
+}
+
+.input-wrapper input {
+  outline: none;
+  border: none;
+}
+
+.input-wrapper > .label {
+  position: absolute;
+  cursor: text;
+  left: 0;
+  transition: all 0.3s ease-out;
+  padding-left: 8px;
+}
+
+.input-wrapper input:focus-visible + .label,
+.input-wrapper input:not(:placeholder-shown) + .label {
+  transform: translateY(-80%);
+  font-size: 10px;
+  color: gray;
+}
+
+.input-wrapper input:-webkit-autofill,
+.input-wrapper input:-webkit-autofill:hover, 
+.input-wrapper input:-webkit-autofill:focus, 
+.input-wrapper input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 40px white inset !important;
+}

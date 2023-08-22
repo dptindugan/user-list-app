@@ -1,0 +1,27 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .button {
+    padding: 6px 12px;
+    border: 1px solid theme('colors.gray');
+    font-weight: 600;
+  }
+
+  .button.filled {
+    border: none;
+    background-color: theme('colors.gray');
+    color: white;
+  }
+
+  .btn-danger {
+    color: theme('colors.red');
+  }
+
+  .btn-danger.filled {
+    background-color: theme('colors.red');
+  }
+}
